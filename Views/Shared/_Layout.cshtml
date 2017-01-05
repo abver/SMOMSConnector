@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Service Manager Endpoint</a>
+            </div>
+        </div>
+        @{
+            if (ViewBag.IsADConfigured)
+            {
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user"></span>
+                            @ViewBag.Tenant
+                        </a>
+                    </li>
+                </ul>
+            }
+        }
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="bs-callout bs-callout-danger">
+                <p>
+                    To edit any app settings, change their values in
+                    <a href="https://portal.azure.com">portal.azure.com</a>
+                </p>
+            </div>
+            <p>&copy; @DateTime.Now.Year - Microsoft</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

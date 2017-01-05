@@ -1,0 +1,99 @@
+﻿<div class="clearfix" style="height: 100px"></div>
+@{
+    if (!ViewBag.IsADConfigured)
+    {
+        <div class="bs-callout bs-callout-danger">
+            <h4>Configure Azure AD Authentication</h4>
+            <p>
+                Add application setting
+                <code>"ida:Tenant"</code> and  <code>"ida:Audience"</code>
+                in <a href="https://portal.azure.com">portal.azure.com</a>
+            </p>
+        </div>
+    }
+    else
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">Azure AD Authentication Settings</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ida:Tenant</td>
+                            <td>@ViewBag.Tenant</td>
+                        </tr>
+                        <tr>
+                            <td>ida:Audience</td>
+                            <td>@ViewBag.Audience</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+}
+<div class="clearfix" style="height: 20px"></div>
+@{
+    if (!ViewBag.IsSMConfigured)
+    {
+        <div class="bs-callout bs-callout-danger">
+            <h4>Configure SM Authentication</h4>
+            <p>
+                Add application setting
+                <code>"ida:ServerName"</code>,
+                <code>"ida:Username"</code>,
+                <code>"ida:Domain"</code>
+                and  <code>"ida:Password"</code>
+                in <a href="https://portal.azure.com">portal.azure.com</a>.
+                Establish a hybrid connection between app service and on prem machine
+                to enable this endpoint
+            </p>
+        </div>
+    }
+    else
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">SM Authentication Settings</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ida:ServerName</td>
+                            <td>@ViewBag.ServerName</td>
+                        </tr>
+                        <tr>
+                            <td>ida:Domain</td>
+                            <td>@ViewBag.Domain</td>
+                        </tr>
+                        <tr>
+                            <td>ida:Username</td>
+                            <td>@ViewBag.Username</td>
+                        </tr>
+                        <tr>
+                            <td>ida:Password</td>
+                            <td>************ (hidden)</td>
+                        </tr>
+                        <!--
+                        <tr>
+                            <td>Connection Status</td>
+                            <td>loading... (TBD)</td>
+                        </tr>
+                        -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+}
