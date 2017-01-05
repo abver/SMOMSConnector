@@ -3,4 +3,4 @@ repo to test ease of deploying a .net web api solution to azure
 
 
 # Deployment Button
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/mebjas/github-to-azure-deployment-test)
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/abver/smoc)
