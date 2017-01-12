@@ -43,7 +43,7 @@
         "1",
         "2"
       ],
-      "defaultValue": "0",
+      "defaultValue": "Small",
       "metadata": {
         "description": "The instance size of the hosting plan (small, medium, or large)."
       }
