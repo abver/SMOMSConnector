@@ -1,4 +1,5 @@
 # Github to Azure deployment test
+** NOTE: ** This branch deploys app service with no AD Autherisation, just for debug purpose.
 repo to test ease of deploying a .net web api solution to azure
 
 
